@@ -1,3 +1,4 @@
+
 import numpy as np
 
 def sigmoid(x):
@@ -51,4 +52,4 @@ print(del_w)
 # -0.1899744811276125
 # Change in Weights:
 # [-0.02031869 -0.04063738 -0.06095608 -0.08127477]
-# [Finished in 0.5s]
+# [Finished in 0.5s] 

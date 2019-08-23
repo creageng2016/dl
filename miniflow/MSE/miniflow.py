@@ -120,7 +120,8 @@ class MSE(Node):
         y = self.inbound_nodes[0].value.reshape(-1, 1)
         a = self.inbound_nodes[1].value.reshape(-1, 1)
         # TODO: your code here
-        self.value = np.sum(np.square(y - a))/y.shape[0]
+        diff = y - a
+        self.value = np.mean(diff ** 2)
 
 def topological_sort(feed_dict):
     """

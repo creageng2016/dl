@@ -61,7 +61,7 @@ class Sigmoid(Node):
 
         Your code here!
         """
-
+        return 1/(1 + np.exp(-x))
 
     def forward(self):
         """
@@ -72,7 +72,10 @@ class Sigmoid(Node):
         """
         # This is a dummy value to prevent numpy errors
         # if you test without changing this method.
-        self.value = -1
+        
+        x = self.inbound_nodes[0].value
+        self.value = self._sigmoid(x)
+
 
 
 def topological_sort(feed_dict):
